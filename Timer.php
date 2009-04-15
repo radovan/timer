@@ -7,6 +7,7 @@
 	class Timer {
 		private $startTime;
 		private $result;
+		private $savedTimes = array();
 	
 		public function start() {
 			$this->startTime = $this->getMicrotime();
@@ -28,7 +29,14 @@
 			list($usec, $sec) = explode(' ', microtime()); 
 			return ((float)$usec + (float)$sec); 
 		}
-function save($code = null) {}
+		
+		public function saveTime($code = null) {
+			$this->savedTimes[] = array(
+				'title' => $code,
+				's' => time(),
+				'res' => $this->result
+			);
+		}
 
 	}
 ?>
