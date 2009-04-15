@@ -11,7 +11,7 @@
 		private $result;
 		private $savedTimes = array();
 	
-		public function startTimer() {
+		public function start() {
 			$this->startTime = $this->getMicrotime();
 		}
 		
@@ -19,7 +19,10 @@
 			$this->result = $this->getMicrotime() - $this->startTime;
 		}
 		
-		public function getResult($saveResult = true) {
+		public function getResult($saveResult = false) {
+			if($saveResult) {
+				$this->saveTime();
+			}
 			return $this->result;
 		}
 		
