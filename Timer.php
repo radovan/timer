@@ -17,7 +17,7 @@
 			$this->result = $this->getMicrotime() - $this->startTime;
 		}
 		
-		public function getResult() {
+		public function getResult($saveResult = true) {
 			return $this->result;
 		}
 		
