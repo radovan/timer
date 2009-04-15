@@ -20,6 +20,10 @@
 			return $this->result;
 		}
 		
+		public function setStartTime($startTime) {
+			$this->startTime = $startTime;
+		}
+		
 		private function getMicrotime(){ 
 			list($usec, $sec) = explode(' ', microtime()); 
 			return ((float)$usec + (float)$sec); 
