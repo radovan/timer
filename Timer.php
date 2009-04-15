@@ -1,15 +1,17 @@
 <?php
+
 	/**
 	 * Timer
 	 * Easy benchmark machine
 	 * @author Radovan Paulech
 	 */
+
 	class Timer {
 		private $startTime;
 		private $result;
 		private $savedTimes = array();
 	
-		public function start() {
+		public function startTimer() {
 			$this->startTime = $this->getMicrotime();
 		}
 		
