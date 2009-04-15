@@ -24,5 +24,7 @@
 			list($usec, $sec) = explode(' ', microtime()); 
 			return ((float)$usec + (float)$sec); 
 		}
+function save($code = null) {}
+
 	}
 ?>
